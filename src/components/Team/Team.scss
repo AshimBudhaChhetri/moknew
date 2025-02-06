@@ -1,0 +1,41 @@
+.team-section {
+    .team-member {
+      position: relative;
+      img {
+        transition: all 0.3s ease-in-out;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.3s ease-in-out;
+      }
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+        .overlay {
+          opacity: 1;
+        }
+      }
+      .social-icons {
+        .icon {
+          color: #fff;
+          font-size: 1.5rem;
+          margin: 0 10px;
+          transition: color 0.3s ease-in-out;
+          &:hover {
+            color: #007bff; // Change hover color
+          }
+        }
+      }
+    }
+  }
+  

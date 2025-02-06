@@ -1,0 +1,73 @@
+.choose-section {
+  background-color: #f9f9f9;
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-top: 50px;
+
+  h6 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #888;
+    margin-bottom: 10px;
+    letter-spacing: 5px;
+  }
+
+  h2 {
+    font-size: 2.7rem;
+    font-weight: 700;
+    color: #333;
+  }
+
+  .features-list {
+    margin-top: 20px;
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+
+      .feature-number {
+        width: 50px;
+        height: 50px;
+        background-color: white; // Gold color
+        color: white;
+        font-size: 1.3rem;
+        font-weight: 400;
+        text-align: center;
+        line-height: 40px;
+      }
+
+      p {
+        font-size: 1.3rem;
+        color: #000000;
+        margin: 0;
+      }
+    }
+  }
+
+  img {
+    border-radius: 10px;
+  }
+}
+
+.right-side-content {
+  width: 500px;
+  height: 400px;
+  margin-left: -5rem;
+  border-radius: 10px;
+  background-color: #b49c73;
+  padding: 50px;
+
+  @media (max-width: 768px) {
+    width: 400px;
+    height: 450px;
+    margin-left: -12.5rem;
+  }
+}
+
+.choose-img {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}

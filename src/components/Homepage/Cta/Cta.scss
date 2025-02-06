@@ -1,0 +1,355 @@
+.cta-section {
+  width: 100%;
+  height: 80vh;
+  background-image: url("../../../Assets/img/cta.jpg"); // Replace with your image path
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  padding: 80px 20px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); // Dark overlay
+    z-index: 1;
+  }
+
+  @media (max-width: 768px) {
+    height: 55vh;
+  }
+
+  .cta-content {
+    position: relative;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 6.5rem;
+    z-index: 2; // Above the overlay
+    color: #fff;
+
+    .cta-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.4;
+      color: #fff;
+
+      @media (max-width: 768px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    .btn-gold {
+      background-color: #d4af37; // Gold button color
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: #b8902f;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.cta-wrapper {
+  background-color: #37373f;
+  width: 90px;
+  height: 90px;
+  border-radius: 45px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .cta-btn {
+    background-color: #37373f;
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+    position: relative;
+    z-index: 3;
+    box-shadow: 0 10px 30px rgba(65, 72, 86, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: plus-animation-reverse 0.3s ease-out forwards; // Faster animation
+  }
+
+  .tooltip {
+    width: 290px;
+    height: 75px;
+    border-radius: 70px;
+    background: #37373f;
+    position: absolute;
+    z-index: 2;
+    padding: 0 15px;
+    box-shadow: 0 10px 30px rgba(65, 72, 86, 0.05);
+    opacity: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    transition: opacity 0.15s ease-in, top 0.15s ease-in, width 0.15s ease-in;
+
+    &::after {
+      content: "";
+      width: 20px;
+      height: 20px;
+      background: #37373f;
+      position: absolute;
+      left: 50%;
+      margin-left: -10px;
+      bottom: -8px;
+      transform: rotate(45deg);
+      z-index: 0;
+    }
+  }
+
+  input {
+    height: 100%;
+    width: 100%;
+    border-radius: 45px; // Input border radius
+    cursor: pointer;
+    position: absolute;
+    z-index: 5;
+    opacity: 0;
+
+    &:checked ~ .cta-btn {
+      animation: plus-animation 0.3s ease-out forwards; // Faster rotation animation
+    }
+
+    &:checked ~ .tooltip {
+      animation: stretch-animation 0.8s ease-out forwards 0.1s; // Tooltip animation
+      top: -90px;
+      opacity: 1;
+    }
+  }
+}
+
+/* Animations */
+@keyframes plus-animation {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+  20% {
+    transform: rotate(60deg) scale(0.93);
+  }
+  55% {
+    transform: rotate(35deg) scale(0.97);
+  }
+  80% {
+    transform: rotate(48deg) scale(0.94);
+  }
+  100% {
+    transform: rotate(45deg) scale(0.95);
+  }
+}
+
+@keyframes plus-animation-reverse {
+  0% {
+    transform: rotate(45deg) scale(0.95);
+  }
+  20% {
+    transform: rotate(-15deg);
+  }
+  55% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(0) scale(1);
+  }
+}
+
+@keyframes stretch-animation {
+  0% {
+    transform: scale(1, 1);
+  }
+  10% {
+    transform: scale(1.1, 0.9);
+  }
+  30% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.05, 0.95);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.whatsapp-Btn {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  .svgContainer {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    transition: all 0.3s;
+    border: 1px solid rgba(156, 156, 156, 0.466);
+
+    .whatsapp-logo {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .BG {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #00d757;
+    background: #00d757;
+    background: #00d757;
+    background: #00d757;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    z-index: -1;
+    border-radius: 9px;
+    pointer-events: none;
+    transition: all 0.3s;
+  }
+
+  &:hover .BG {
+    transform: rotate(35deg);
+    transform-origin: bottom;
+  }
+
+  &:hover .svgContainer {
+    background-color: rgba(156, 156, 156, 0.466);
+  }
+}
+
+.viber-Btn {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  .svgContainer {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    transition: all 0.3s;
+    border: 1px solid rgba(156, 156, 156, 0.466);
+    .viber-logo {
+      width: 59px;
+      height: 59px;
+    }
+  }
+
+  .BG {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    background: linear-gradient(45deg, #59267c, #291636, #59267c);
+    z-index: -1;
+    border-radius: 9px;
+    pointer-events: none;
+    transition: all 0.3s;
+  }
+
+  &:hover .BG {
+    transform: rotate(35deg);
+    transform-origin: bottom;
+  }
+
+  &:hover .svgContainer {
+    background-color: rgba(156, 156, 156, 0.466);
+  }
+}
+
+.mail-Btn {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  .svgContainer {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    transition: all 0.3s;
+    border: 1px solid rgba(156, 156, 156, 0.466);
+
+    .mail-logo {
+      margin-top: 6px;
+      width: 42px;
+      height: 39px;
+    }
+  }
+
+  .BG {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+    z-index: -1;
+    border-radius: 9px;
+    pointer-events: none;
+    transition: all 0.3s;
+  }
+
+  &:hover .BG {
+    transform: rotate(35deg);
+    transform-origin: bottom;
+  }
+
+  &:hover .svgContainer {
+    background-color: rgba(156, 156, 156, 0.466);
+  }
+}

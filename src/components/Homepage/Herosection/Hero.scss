@@ -1,0 +1,164 @@
+.hero-section {
+  font-family: "Gramond", serif;
+  .hero-image {
+    position: relative; /* Ensure the parent has relative positioning */
+    background-image: url("../../../Assets/img/cta.jpg");
+    background-size: cover;
+    background-position: center -50px;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    filter: brightness(95%);
+
+    &::before {
+      content: ""; /* This is required for the pseudo-element to render */
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.95) 0%,
+        rgba(44, 44, 44, 0.5) 44%,
+        rgba(36, 36, 36, 0.5) 58%,
+        rgba(63, 63, 63, 0.5) 90%
+      );
+      z-index: 1; /* Place overlay below the content inside .hero-image */
+
+      @media (max-width: 768px) {
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.95) 0%,
+          rgba(44, 44, 44, 0.5) 44%,
+          rgba(36, 36, 36, 0.7) 58%,
+          rgba(63, 63, 63, 0.65) 90%
+        );
+      }
+    }
+
+    .content {
+      position: relative; /* Ensure the content sits above the overlay */
+      z-index: 2;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      height: 100vh; /* Adjust for smaller devices */
+      width: 200vw;
+      background-size: cover;
+      background-position: center 0px;
+      background-attachment: scroll;
+    }
+  }
+
+  .hero-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: -18%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+      margin-top: -88%;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 1.5rem;
+    }
+    h2 {
+      font-size: 6.6rem;
+      font-weight: 900;
+      color: #ffffff;
+      z-index: 2;
+
+      @media (max-width: 768px) {
+        font-size: 4.5rem;
+      }
+    }
+    h3 {
+      font-size: 3.1rem;
+      letter-spacing: 13px;
+      font-weight: bold;
+      color: #ffffff;
+      margin-bottom: 10px;
+      z-index: 2;
+
+      @media (max-width: 768px) {
+        font-size: 1.65rem;
+      }
+
+      // @media (max-width: 576px) {
+      //   font-size: 1.5rem;
+      // }
+    }
+
+    h4 {
+      font-size: 1.8rem;
+      letter-spacing: 0px;
+      font-weight: 500;
+      color: #ffffff;
+      z-index: 2;
+
+      @media (max-width: 768px) {
+        margin-top: 9px;
+      }
+
+      // @media (max-width: 576px) {
+      //   font-size: 1.5rem;
+      // }
+    }
+
+    h5 {
+      font-size: 1.4rem;
+      letter-spacing: 5px;
+      font-weight: 900;
+      color: #b49c73;
+      z-index: 2;
+
+      @media (max-width: 768px) {
+        font-size: 2.2rem;
+      }
+
+      // @media (max-width: 576px) {
+      //   font-size: 1.5rem;
+      // }
+    }
+    .horizontal-line {
+      position: relative;
+      width: 100px;
+      height: 2px;
+      background-color: #b49c73;
+      margin: 1rem auto;
+      z-index: 2;
+    }
+  }
+  .hero-btn {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+
+    .hero-appointment {
+      background-color: #b49c73;
+      border: none;
+      border-radius: 5px;
+      color: #000000;
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      cursor: pointer;
+      box-shadow: 4px 4px 20px #000000;
+      transition: all 0.3s ease;
+      z-index: 2;
+
+      &:hover {
+        background-color: #9c815d;
+        color: #ffffff;
+        transform: scale(1.05);
+      }
+    }
+  }
+}

@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+.about-page {
+  .who-we-are-section {
+    padding: 3rem 0;
+
+    .content {
+      .title {
+        font-size: 1.2rem;
+        color: #b49c73;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      .main-heading {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #000000;
+        margin-bottom: 1rem;
+      }
+
+      .description {
+        font-size: 1rem;
+        color: #555555;
+        line-height: 1.6;
+      }
+    }
+
+    .stats {
+      position: relative;
+      margin-top: 2rem;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  .features-section {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 4rem 0;
+
+    .content {
+      padding-left: 30px;
+      padding-right: 30px;
+      .title {
+        font-size: 1.2rem;
+        color: #b49c73;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      .main-heading {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+
+      .description {
+        padding-top: 2rem;
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+
+        button {
+          background-color: #ffffff;
+          color: #000000;
+          font-size: 1rem;
+          font-weight: bold;
+          border: none;
+          padding: 0.75rem 1.5rem;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: #b49c73;
+          }
+        }
+
+        .active {
+          background-color: #b49c73;
+          color: #000000;
+        }
+      }
+    }
+
+    .image {
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+.team-section {
+  h2 {
+    font-size: 2.5rem;
+    color: #000;
+    font-weight: bold;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 20%; /* Adjust width as needed */
+      height: 2px; /* Thickness of the underline */
+      background-color: #b49c73; /* Yellow color */
+      margin: 8px auto 0; /* Adjust spacing */
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .team-member {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover img {
+      transform: scale(1.2);
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      border-radius: 10px;
+
+      .social-icons {
+        display: flex;
+
+        .icon {
+          color: #fff;
+          font-size: 1.5rem;
+          transition: color 0.3s ease-in-out;
+
+          &:hover {
+            color: #b49c73;
+          }
+        }
+      }
+    }
+
+    &:hover .overlay {
+      opacity: 1;
+    }
+
+    h5 {
+      margin-top: 10px;
+      font-size: 1.25rem;
+      color: #333;
+    }
+  }
+}
+
+.services-section {
+  .service-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      transform: scale(1.05);
+      background-color: #b49c73; // Orange background
+    }
+
+    .icon-container {
+      font-size: 3rem;
+      color: #b49c73;
+      margin-bottom: 1rem;
+    }
+
+    .title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .description {
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
+
+    &.bg-orange:hover {
+      background-color: #b49c73; // Custom hover for orange
+    }
+  }
+}
+
+.startup-section {
+  background-color: #000; // Dark background
+  color: #fff;
+
+  .highlight-box {
+    border: 1px solid #333;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: #111;
+    position: relative;
+
+    .highlight-number {
+      font-size: 5rem;
+      font-weight: bold;
+      color: #b49c73;
+    }
+
+    .highlight-text {
+      font-size: 1.25rem;
+      color: #b49c73;
+      margin-top: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05rem;
+    }
+  }
+
+  .content {
+    .subtitle {
+      font-size: 1rem;
+      color: #b49c73;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .main-heading {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+    }
+
+    .description {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #dcdcdc;
+    }
+  }
+}
