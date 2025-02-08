@@ -63,7 +63,7 @@ const ContactUs = () => {
                 Or visit us at :{" "}
                 <a
                   style={{ textDecoration: "none" }}
-                  href="https://maps.app.goo.gl/HRDeoVsb1StDAn1K6"
+                  href="https://maps.app.goo.gl/nEHSYE4QsPHS4orm7"
                   target="_blank"
                 >
                   MOKSHA LEGAL GROUP

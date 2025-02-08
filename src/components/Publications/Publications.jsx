@@ -15,6 +15,24 @@ const Publications = () => {
       .catch((error) => console.error("Error fetching blogs:", error));
   }, []);
 
+  // Function to create SEO-friendly slugs
+  const createSlug = (title) => {
+    return title
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-") // Replace non-alphanumeric characters with hyphens
+      .replace(/^-+|-+$/g, ""); // Trim hyphens from start and end
+  };
+
+  // Function to limit words in description
+  const truncateText = (text, wordLimit) => {
+    if (!text) return ""; // Handle empty descriptions
+    const words = text.split(" ");
+    if (words.length > wordLimit) {
+      return words.slice(0, wordLimit).join(" ") + " ...";
+    }
+    return text;
+  };
+
   return (
     <div className="publication-page">
       <Banner
@@ -41,10 +59,18 @@ const Publications = () => {
                     <p className="article-category">LAW FIRM</p>
                     <h3 className="article-title">{blog.blog_name}</h3>
                     <p className="article-description">
-                      {blog.blog_description}
+                      {truncateText(blog.blog_description, 25)}
                     </p>
                     <button
-                      onClick={() => navigate("publications", { state: blog })}
+                      className="learn-but"
+                      onClick={() =>
+                        navigate(
+                          `/publications/${createSlug(blog.blog_name)}`,
+                          {
+                            state: blog,
+                          }
+                        )
+                      }
                     >
                       Learn More
                     </button>

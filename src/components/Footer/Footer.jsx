@@ -65,7 +65,7 @@ const Footer = () => {
               />
               <div className="footer-card1 callus">
                 <h5 className="mt-3">Call Us</h5>
-                <p>+977 9863472265</p>
+                <p>+977 9843467402</p>
               </div>
             </div>
           </div>

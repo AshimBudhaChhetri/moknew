@@ -1,7 +1,6 @@
 {
   "name": "law-firm",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
@@ -13,12 +12,14 @@
     "@testing-library/user-event": "^13.5.0",
     "ajv": "^6.0.0",
     "ajv-keywords": "^3.5.2",
+    "axios": "^1.7.9",
     "bootstrap": "^5.3.3",
     "framer-motion": "^11.15.0",
     "law-firm": "file:",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.7",
     "react-dom": "^18.3.1",
+    "react-icons": "^5.4.0",
     "react-multi-carousel": "^2.8.5",
     "react-router-dom": "^6.28.0",
     "react-scripts": "^5.0.1",

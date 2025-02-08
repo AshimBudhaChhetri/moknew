@@ -1,65 +1,245 @@
-$primary-brown: #8b5e3c;
-$secondary-brown: #a67c52;
-$text-dark: #3d2c1e;
-$background-light: #f5e6d3;
-
 .publication-container {
-  background-color: $background-light;
-  font-family: "Arial", sans-serif;
+  background-color: #fcf7f0;
+  padding-bottom: 50px;
 
-  .publication-sidebar {
-    background-color: lighten($primary-brown, 40%);
+  .container-fluid {
+    display: flex;
+    justify-content: center;
+  }
+
+  .row {
+    display: flex;
+    align-items: flex-start;
     padding: 20px;
-    border-right: 2px solid $primary-brown;
+  }
 
-    h5 {
-      color: $text-dark;
-      font-weight: bold;
-      margin-bottom: 15px;
-    }
+  .sidebar-main {
+    position: sticky !important;
+  }
 
-    .publication-item {
-      padding: 10px;
-      border-bottom: 1px solid darken($background-light, 10%);
-      color: $text-dark;
-      transition: all 0.3s ease;
-      cursor: pointer;
+  /* Sticky Sidebar */
+  .publication-sidebar {
+    position: sticky !important;
+    top: 80px; /* Adjust based on navbar height */
+    height: auto;
+    max-height: 80vh; /* Allow scrolling inside */
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    border-left: 4px solid #9c815d; /* Left border for styling */
+  }
 
-      &:hover {
-        background-color: lighten($primary-brown, 30%);
-        color: $primary-brown;
-        font-weight: bold;
-      }
+  .publication-sidebar h5 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ddd; /* Underline effect */
+    padding-bottom: 8px;
+  }
 
-      &.active {
-        font-weight: bold;
-        color: $primary-brown;
-      }
+  .publication-item {
+    padding: 12px;
+    margin-bottom: 8px;
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+  }
+
+  .publication-item::before {
+    content: "»"; /* Unicode arrow */
+    color: #9c815d;
+    font-size: 18px;
+  }
+
+  .publication-item:hover {
+    background: #f5f5f5;
+    color: #333;
+  }
+
+  .publication-item.active {
+    background: #9c815d;
+    color: white;
+    font-weight: bold;
+    padding-left: 15px;
+    border-radius: 5px;
+  }
+
+  /* Responsive Fix: Remove Sticky for Small Screens */
+  @media (max-width: 991px) {
+    .publication-sidebar {
+      position: relative;
+      max-height: none;
+      padding: 15px;
     }
   }
 
+  /* Content Section */
   .publication-content {
-    padding: 30px;
-    background-color: white;
-    border: 2px solid darken($background-light, 10%);
+    padding: 40px 120px 40px 120px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Adds soft shadow */
+  }
 
-    h2 {
-      color: $primary-brown;
+  .publication-img-div {
+    height: 400px;
+    width: 100%;
+  }
+
+  .publication-content img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .publication-content h2 {
+    font-size: 28px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 30px;
+  }
+
+  .content-html {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 720px) {
+  .publication-container {
+    background-color: #fcf7f0;
+    padding-bottom: 50px;
+
+    .container-fluid {
+      display: flex;
+      justify-content: center;
+    }
+
+    .row {
+      display: flex;
+      align-items: flex-start;
+      padding: 10px;
+    }
+
+    .sidebar-main {
+      position: sticky !important;
+    }
+
+    /* Sticky Sidebar */
+    .publication-sidebar {
+      position: sticky !important;
+      top: 80px; /* Adjust based on navbar height */
+      height: auto;
+      max-height: 80vh; /* Allow scrolling inside */
+      overflow-y: auto;
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
+      border-left: 4px solid #9c815d; /* Left border for styling */
+    }
+
+    .publication-sidebar h5 {
+      font-size: 20px;
       font-weight: bold;
+      margin-bottom: 15px;
+      color: #333;
+      text-transform: uppercase;
+      border-bottom: 2px solid #ddd; /* Underline effect */
+      padding-bottom: 8px;
     }
 
-    p {
-      color: $text-dark;
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    img {
-      width: 100%;
+    .publication-item {
+      padding: 12px;
+      margin-bottom: 8px;
+      background: #fff;
       border-radius: 5px;
-      border: 3px solid lighten($primary-brown, 20%);
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      font-size: 16px;
+      color: #333;
+      text-align: left;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px; /* Space between icon and text */
+    }
+
+    .publication-item::before {
+      content: "»"; /* Unicode arrow */
+      color: #9c815d;
+      font-size: 18px;
+    }
+
+    .publication-item:hover {
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    .publication-item.active {
+      background: #9c815d;
+      color: white;
+      font-weight: bold;
+      padding-left: 15px;
+      border-radius: 5px;
+    }
+
+    /* Responsive Fix: Remove Sticky for Small Screens */
+
+    /* Content Section */
+    .publication-content {
+      padding: 5px 20px 5px 20px;
+      border-radius: 8px;
+      transition: all 0.3s ease-in-out;
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Adds soft shadow */
+      margin-top: 20px;
+    }
+
+    .publication-img-div {
+      height: 200px;
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .publication-content img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .publication-content h2 {
+      font-size: 28px;
+      color: #333;
+      font-weight: bold;
+      margin-bottom: 15px;
+      margin-top: 30px;
+    }
+
+    .content-html {
+      font-size: 15px;
+      color: #444;
+      line-height: 1.6;
     }
   }
 }
