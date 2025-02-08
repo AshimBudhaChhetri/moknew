@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
 .banner-section {
   background-size: cover;
   background-position: center;
@@ -48,6 +50,10 @@
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 2;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+
+    font-style: normal;
 
     h1 {
       font-size: 3rem;

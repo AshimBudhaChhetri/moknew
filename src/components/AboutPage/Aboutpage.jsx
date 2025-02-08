@@ -84,10 +84,15 @@ const Aboutpage = () => {
     <div className="about-page">
       {/* Banner Section */}
       <Banner
-        title="About Us"
-        subtitle="Who We Are"
+        title={
+          <>
+            About <em style={{ color: "#ac835d" }}>Us</em>
+          </>
+        }
+        subtitle={<em>Who We Are</em>}
         backgroundImage={Bannerimg}
       />
+
       {/* Who We Are Section */}
       <div className="who-we-are-section py-5">
         <div className="container">
@@ -96,7 +101,7 @@ const Aboutpage = () => {
               <div className="content">
                 <p className="title">Who We Are</p>
                 <h2 className="main-heading">Best Law Firm in Nepal</h2>
-                <p style={{ textAlign: "justify" }}>
+                <p className="sub-title-about" style={{ textAlign: "justify" }}>
                   Moksha Legal Group is a leading full-service law firm in
                   Nepal, renowned for providing precise and effective legal
                   solutions to meet the unique needs of businesses and
@@ -104,21 +109,21 @@ const Aboutpage = () => {
                   in-depth understanding of the Nepali legal system, ensuring
                   reliable and result-oriented services.
                 </p>
-                <p style={{ textAlign: "justify" }}>
+                <p className="sub-title-about" style={{ textAlign: "justify" }}>
                   We specialize in a wide range of practice areas, including
                   business incorporation in Nepal, foreign investment
                   consulting, corporate and civil litigation, dispute
                   resolution, labor law, intellectual property protection,
                   banking law, and taxation services.
                 </p>
-                <p style={{ textAlign: "justify" }}>
+                <p className="sub-title-about" style={{ textAlign: "justify" }}>
                   With a proven track record of delivering innovative and
                   result-driven legal services, Moksha Legal Group is dedicated
                   to helping businesses and individuals navigate the
                   complexities of the Nepali legal landscape efficiently and
                   effectively.
                 </p>
-                <p style={{ textAlign: "justify" }}>
+                <p className="sub-title-about" style={{ textAlign: "justify" }}>
                   By partnering with Moksha Legal Group, you gain access to a
                   top law firm in Nepal that prioritizes client satisfaction,
                   ensures compliance with legal and regulatory requirements, and

@@ -1,41 +1,71 @@
 .team-section {
-    .team-member {
+  .team-member {
+    .image-container {
       position: relative;
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+
       img {
-        transition: all 0.3s ease-in-out;
-      }
-      .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.6);
-        opacity: 0;
+        height: auto;
+        display: block;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .social-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(139, 107, 72, 0.9);
+        padding: 8px 15px;
+        border-radius: 20px;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        gap: 15px;
+        opacity: 0;
         transition: opacity 0.3s ease-in-out;
-      }
-      &:hover {
-        img {
-          transform: scale(1.1);
-        }
-        .overlay {
-          opacity: 1;
-        }
-      }
-      .social-icons {
-        .icon {
-          color: #fff;
-          font-size: 1.5rem;
-          margin: 0 10px;
-          transition: color 0.3s ease-in-out;
+
+        a {
+          color: white;
+          font-size: 18px;
+          transition: color 0.3s;
+
           &:hover {
-            color: #007bff; // Change hover color
+            color: #f4c57f;
           }
         }
       }
     }
+
+    &:hover {
+      .image-container {
+        img {
+          transform: scale(1.05);
+        }
+        .social-overlay {
+          opacity: 1;
+        }
+      }
+    }
+
+    h5 {
+      font-size: 21px;
+
+      margin-top: 10px;
+      color: #333;
+      font-family: "Playfair Display", serif;
+      font-optical-sizing: auto;
+
+      font-style: normal;
+    }
+
+    .position {
+      font-size: 1rem;
+      color: #777;
+      margin-top: 5px;
+    }
   }
-  
+}

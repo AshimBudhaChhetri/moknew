@@ -62,10 +62,15 @@ const Services = () => {
     <div className="services-page">
       {/* Banner Section */}
       <Banner
-        title="Our Services"
-        subtitle="Reputation, Respect, Result"
+        title={
+          <>
+            Our <em style={{ color: "#ac835d" }}>Services</em>
+          </>
+        }
+        subtitle={<em>Reputation, Respect, and Results</em>}
         backgroundImage={Bannerimg}
       />
+
       {/* Services Section */}
       <div className="our-services-section py-5">
         <div className="container">
@@ -75,7 +80,7 @@ const Services = () => {
                 key={service.id}
                 className="col-md-4 mb-4"
                 style={{ cursor: "pointer" }}
-                onClick={() => navigate(`/services/${service.id}`)}
+                // onClick={() => navigate(`/services/${service.id}`)}
               >
                 <div
                   className="service-card position-relative text-center"

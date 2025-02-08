@@ -36,8 +36,13 @@ const Publications = () => {
   return (
     <div className="publication-page">
       <Banner
-        title="Publications"
-        subtitle="Reputation, Respect, Result"
+        title={
+          <>
+            Our
+            <em style={{ color: "#ac835d" }}> Publications</em>
+          </>
+        }
+        subtitle={<em>Knowledge, Insights, and Research</em>}
         backgroundImage={Bannerimg}
       />
 

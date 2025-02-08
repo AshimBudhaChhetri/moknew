@@ -29,6 +29,10 @@
         height: 100%;
         padding: 30px; /* Padding applied here */
         box-sizing: border-box; /* Ensures padding doesn’t overflow */
+        font-family: "Playfair Display", serif;
+        font-optical-sizing: auto;
+
+        font-style: normal;
       }
 
       .overlay-outer {
@@ -60,8 +64,12 @@
           transition: opacity 0.3s ease;
 
           p {
-            font-size: 1rem;
+            font-size: 1.4rem;
             color: #fff;
+            font-family: "Jost", serif;
+            font-optical-sizing: auto;
+
+            font-style: normal;
           }
         }
       }
