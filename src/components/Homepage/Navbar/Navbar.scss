@@ -164,12 +164,16 @@
 
     li {
       margin-right: 20px;
-      font-size: 18px;
+      font-size: 19px;
       font-weight: 400;
     }
 
     a {
       text-decoration: none;
+      font-family: "Jost", serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+
       color: #fff; // Default link color
 
       &:hover,

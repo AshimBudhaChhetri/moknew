@@ -25,22 +25,26 @@
     z-index: 1;
   }
 
+  /* ✅ Fix for tablets */
   @media (max-width: 1024px) {
     background-position: center center;
-    height: 80vh;
+    height: 70vh;
   }
 
+  /* ✅ Fix for mobile devices */
   @media (max-width: 768px) {
     background-size: cover;
     background-attachment: scroll;
-    height: 60vh;
+    background-position: center;
+    height: 50vh;
   }
 
+  /* ✅ Fine-tuning for smaller mobile screens */
   @media (max-width: 576px) {
     background-size: cover;
-    background-position: center -200px;
-    height: 50vh;
-    background-attachment: fixed;
+    background-position: center center;
+    background-attachment: scroll;
+    height: 45vh;
   }
 
   .banner-text {
@@ -52,7 +56,6 @@
     z-index: 2;
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
-
     font-style: normal;
 
     h1 {

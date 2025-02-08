@@ -84,7 +84,9 @@ const Publications = () => {
               </div>
             ))
           ) : (
-            <p>Loading blogs...</p>
+            <div className="d-flex justify-content-center">
+              <div className="loader"></div>
+            </div>
           )}
         </div>
       </div>

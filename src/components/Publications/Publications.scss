@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
 .publication-page {
   .articles-section {
     .article-card {
@@ -66,7 +67,6 @@
           margin: 10px 0;
           font-family: "Playfair Display", serif;
           font-optical-sizing: auto;
-
           font-style: normal;
         }
 
@@ -76,7 +76,6 @@
           margin-bottom: 10px;
           font-family: "Jost", serif;
           font-optical-sizing: auto;
-
           font-style: normal;
         }
 
@@ -84,6 +83,7 @@
           font-size: 0.8rem;
           color: #888;
         }
+
         .learn-but {
           padding: 5px;
           border: none;
@@ -92,6 +92,21 @@
           border-radius: 3px;
         }
       }
+    }
+  }
+
+  /* ✅ Move the loader outside .article-card */
+  .loader {
+    width: 120px;
+    height: 20px;
+    background: linear-gradient(#a38653 0 0) left/20px 20px no-repeat #ddd;
+    animation: l1 1s infinite linear;
+    margin: auto; /* Centering loader */
+  }
+
+  @keyframes l1 {
+    50% {
+      background-position: right;
     }
   }
 }
